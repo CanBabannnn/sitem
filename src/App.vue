@@ -39,15 +39,9 @@
             <div class="customStatus ml-4"><span class="text-color text-sm customText"></span></div>
         </div>
     </div>
-    <div class="activityDetails">
-        <div class="mb-3 ml-4">
-            <span class="text-color mt-3 acitivityUp">Loading</span><br>
-            <span class="text-color mt-3 acitivityDown">Loading</span><br>
-            <span class="text-color mt-3 activityElapsed">Loading</span>
-        </div>
+    <div class="activityDetails" id="activityS">
     </div>
 </div>
-    
   </div>
 </div>
   <div class="footer">

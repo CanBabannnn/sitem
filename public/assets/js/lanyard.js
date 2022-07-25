@@ -39,38 +39,47 @@ lanyard.onmessage = function (event) {
 };
 
 function update_presence() {
+  var netflix = data.d.activities.find(millsl => millsl.application_id === "926541425682829352");
   var codeAc = data.d.activities.find(mills => mills.application_id === "782685898163617802");
-  if(codeAc){
-    if(codeAc.details){
-      document.querySelector('.acitivityUp').innerHTML = `&nbsp;${codeAc.details}`;
-    }else {
-      document.querySelector('.acitivityUp').style.display = 'none';
-    }
-    if(codeAc.state){
-      document.querySelector('.acitivityDown').innerHTML = `&nbsp;${codeAc.state}`;
-    }else {
-      document.querySelector('.acitivityDown').style.display = 'none';
-    }
-  }else if(data.d.activities.find(el => el.type === 0)) {
-    const d = data.d.activities.find(el => el.type === 0)
-    if(d.details){
-      document.querySelector('.acitivityUp').innerHTML = `&nbsp;${d.details}`;
-    }else if(d.name){
-      document.querySelector('.acitivityUp').innerHTML = `&nbsp;${d.name}`;
-    }else {
-      document.querySelector('.acitivityUp').style.display = 'none';
-    }
-    if(d.state){
-      document.querySelector('.acitivityDown').innerHTML = `&nbsp;${d.state}`;
-    }else {
-      document.querySelector('.acitivityDown').style.display = 'none';
-    }
-  }else{
-    document.querySelector('.activity').style.display = "none";
-    document.querySelector('.acitivityUp').style.display = 'none';
-    document.querySelector('.acitivityDown').style.display = 'none';
-    document.querySelector('.activityElapsed').style.display = 'none';
+  if(netflix){
+    var logo = netflix.assets.large_image
+    var logourl = logo.substring(logo.indexOf("https/"));
+    var replacedurl = logourl.replace('https/','https://');
+
+    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-play"></i> Watching <b>${netflix.name}</b></span></span>`;
+    document.querySelector('#activityS').innerHTML = `
+    <img draggable="false" id="activityImg" src="${replacedurl}" style="position:relative;float:left;margin-left:10px;max-height:100px;max-width:100px;" alt="app logo">
+    <div class="mb-3 ml-4">
+      <div style="margin-left:15px;">
+      <span class="text-color mt-1"><b>&nbsp;${netflix.name}</b></span><br>
+      <span class="text-color mt-3">&nbsp;${netflix.details.length > 26 ? netflix.details.split(0,26) : netflix.details}</span><br>
+      ${netflix.state ? `<span class="text-color mt-3">&nbsp;${netflix.state}</span><br>` : `<br>`}
+      </div>
+    </div>
+    `;
+  }else if(codeAc){
+    var logo = codeAc.assets.large_image
+    var logourl = logo.substring(logo.indexOf("https/"));
+    var replacedurl = logourl.replace('https/','https://');
+
+    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-play"></i> Playing <b>${codeAc.name}</b></span></span>`;
+    document.querySelector('#activityS').innerHTML = `
+    <img draggable="false" id="activityImg" src="${replacedurl}" style="position:relative;float:left;margin-left:10px;max-height:100px;max-width:100px;" alt="app logo">
+    <div class="mb-3 ml-4">
+      <div style="margin-left:15px;">
+      <span class="text-color mt-1"><b>&nbsp;${codeAc.name}</b></span><br>
+      <span class="text-color mt-3">&nbsp;${codeAc.details.length > 26 ? codeAc.details.split(0,26) : codeAc.details}</span><br>
+      ${codeAc.state ? `<span class="text-color mt-3">&nbsp;${codeAc.state}</span><br>` : `<br>`}
+      </div>
+    </div>
+    `;
+  }else {
+    document.querySelector('.activity').innerHTML = ``;
+    document.querySelector('#activityS').innerHTML = ``;
+    document.querySelector('.activity').style.display = 'none'
+    document.querySelector('#activityS').style.display = 'none'
   }
+
   document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
   document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'?size=4096';
   if(data.d.discord_status == "online"){
@@ -94,30 +103,6 @@ function update_presence() {
   }
 
   setInterval(function(){
-    if(codeAc){
-    var countDownDate = new Date(codeAc.timestamps.start).getTime();
-    var now = new Date().getTime();
-    var distance = now-countDownDate;
-    var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    var elapsed_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}`
-    if(window.getComputedStyle(document.querySelector('.activity')).display == "none"){ document.querySelector('.activity').style.display = 'flex'; }
-    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> Playing ${codeAc.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
-    document.querySelector('.activityElapsed').innerHTML = `&nbsp;${elapsed_time}`;
-  }else if(data.d.activities.find(el => el.type === 0)) {
-    const d = data.d.activities.find(el => el.type === 0)
-    var countDownDate = new Date(d.timestamps.start).getTime();
-    var now = new Date().getTime();
-    var distance = now-countDownDate;
-    var hour = Math.floor((distance % (1000 * 60 * 60 * 60)) / (1000 * 60 *60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    var elapsed_time = `${hour ? `${hour}h ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`}`
-    if(window.getComputedStyle(document.querySelector('.activity')).display == "none"){ document.querySelector('.activity').style.display = 'flex'; }
-    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-gamepad"></i> Playing ${d.name} <span class="text-color">— elapsed ${elapsed_time}</span></span></span>`;
-    document.querySelector('.activityElapsed').innerHTML = `&nbsp;${elapsed_time}`;
-  }
     if(data.d.listening_to_spotify == true) {
     var crD = new Date(data.d.spotify.timestamps.end).getTime();
     var now = new Date().getTime();
