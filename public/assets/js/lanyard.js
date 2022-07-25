@@ -48,7 +48,7 @@ function update_presence() {
 
     document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-play"></i> Watching <b>${netflix.name}</b></span></span>`;
     document.querySelector('#activityS').innerHTML = `
-    <img draggable="false" id="activityImg" src="${replacedurl}" style="position:relative;float:left;margin-left:10px;max-height:100px;max-width:100px;" alt="app logo">
+    <img draggable="false" id="activityImg" src="${replacedurl}" style="position:relative;float:left;margin-left:10px;width:90px;height:90px;" alt="app logo">
     <div class="mb-3 ml-4">
       <div style="margin-left:15px;">
       <span class="text-color mt-1"><b>&nbsp;${netflix.name}</b></span><br>
@@ -64,7 +64,7 @@ function update_presence() {
 
     document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-play"></i> Playing <b>${codeAc.name}</b></span></span>`;
     document.querySelector('#activityS').innerHTML = `
-    <img draggable="false" id="activityImg" src="${replacedurl}" style="position:relative;float:left;margin-left:10px;max-height:100px;max-width:100px;" alt="app logo">
+    <img draggable="false" id="activityImg" src="${replacedurl}" style="position:relative;float:left;margin-left:10px;width:90px;height:90px;" alt="app logo">
     <div class="mb-3 ml-4">
       <div style="margin-left:15px;">
       <span class="text-color mt-1"><b>&nbsp;${codeAc.name}</b></span><br>
