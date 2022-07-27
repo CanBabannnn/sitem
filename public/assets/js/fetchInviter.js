@@ -46,6 +46,7 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
 
     fetch("https://api.mishudev.xyz/v1/user/906634054311481364", {
         headers:{
+             mode: 'cors',
             'Accept':'application/json',
             'Content-Type':'application/json',
         },
