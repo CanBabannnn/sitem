@@ -52,5 +52,5 @@ fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
     }).then(response => response.json()).then(data => {
         user = data
         document.querySelector('.banner').style.background = `url('https://cdn.discordapp.com/banners/${user.id}/${user.banner}?size=4096') center center no-repeat`;
-        document.querySelector('.banner').style.backgroundSize = '100% 100%';
+        document.querySelector('.banner').style.backgroundSize = 'cover';
     })
