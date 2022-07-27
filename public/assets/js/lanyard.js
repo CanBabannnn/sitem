@@ -1,5 +1,5 @@
 const lanyard = new WebSocket("wss://api.lanyard.rest/socket");
-/**/
+
 var data = {};
 var received = false;
 
