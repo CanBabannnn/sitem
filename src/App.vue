@@ -1,4 +1,4 @@
-""<template>
+<template>
 <div class="main">
 <div class="preloader">
   <span class="loaderText">better soon</span>
@@ -15,7 +15,6 @@
     <button onclick="topper()" class="hover:bg-[#d1d1e0]/50 topperButton navigatorButtons">
         <i class="fa-regular fa-chevron-up"></i>
     </button>
-<!-- modal -->
 <div class="modal-overlay">
   <div class="modal">
     <button class="close-modal text-color">
