@@ -73,12 +73,28 @@ function update_presence() {
       </div>
     </div>
     `;
+  }else if(data.d.activities.find(millsl => millsl.type === 0)){
+    const dat = data.d.activities.find(millsl => millsl.type === 0);
+    var logo = dat.assets.large_image
+    var logourl = logo.substring(logo.indexOf("https/"));
+    var replacedurl = logourl.replace('https/','https://');
+    document.querySelector('.activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-solid text-color fa-play"></i> Playing <b>${dat.name}</b></span></span>`;
+    document.querySelector('#activityS').innerHTML = `
+    <img draggable="false" id="activityImg" src="${replacedurl}" style="position:relative;float:left;margin-left:10px;width:90px;height:90px;object-fit:cover;border-radius:8px;" alt="app logo">
+    <div class="mb-3 ml-4">
+      <div style="margin-left:15px;">
+      <span class="text-color mt-1"><b>&nbsp;${dat.name}</b></span><br>
+      <span class="text-color mt-3">&nbsp;${dat.details.length > 26 ? dat.details.split(0,26) : dat.details}</span><br>
+      ${dat.state ? `<span class="text-color mt-3">&nbsp;${dat.state}</span><br>` : `<br>`}
+      </div>
+    </div>
+    `;
   }else {
     document.querySelector('.activity').innerHTML = ``;
     document.querySelector('#activityS').innerHTML = ``;
     document.querySelector('.activity').style.display = 'none'
     document.querySelector('#activityS').style.display = 'none'
-  }
+  };
 
   document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
   document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'?size=4096';
