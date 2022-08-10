@@ -80,7 +80,7 @@ function update_presence() {
     <div class="mb-3 ml-4">
       <div style="margin-left:15px;">
       <span class="text-color mt-1"><b>&nbsp;${dat.name}</b></span><br>
-      <span class="text-color mt-3">&nbsp;${dat.details.length ? dat.details : ''}</span><br>
+      <span class="text-color mt-3">&nbsp;${dat.details ? dat.details : ''}</span><br>
       ${dat.state ? `<span class="text-color mt-3">&nbsp;${dat.state}</span><br>` : `<br>`}
       </div>
     </div>
