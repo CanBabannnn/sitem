@@ -1,5 +1,6 @@
 <template>
 <div class="main">
+<notifications group="foo" />
 <div class="preloader">
   <span class="loaderText">better soon</span>
   <!--<div class="loaders">
@@ -15,8 +16,8 @@
     <button onclick="topper()" class="hover:bg-[#d1d1e0]/50 topperButton navigatorButtons">
         <i class="fa-regular fa-chevron-up"></i>
     </button>
-<div class="modal-overlay">
-  <div class="modal">
+<div class="modal-overlay discords">
+  <div class="modal _discord">
     <button class="close-modal text-color">
         <span class="close-wrapper">
 			<span class="close">
@@ -43,6 +44,50 @@
 </div>
   </div>
 </div>
+
+<div class="modal-overlay contact">
+  <div class="modal _contact">
+    <button class="close-modal _close text-color">
+        <span class="close-wrapper closerP">
+			<span class="close">
+				<i class="fa-solid fa-x"></i>
+			</span>
+			<span class="text title eskeys">ESC</span>
+		</span>
+    </button>
+    <div class="contacts">
+    <p class="text-[50px] font-bold _contactText">Contact</p>
+    <form @submit.prevent="onSubmit" autoComplete="off">
+      <div class="group">      
+        <input id="tag" name="tag" type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+      <label>Discord Tag (mishu#0011)</label>
+    </div>
+    <div class="group">      
+        <input id="id" name="id" type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+      <label>Discord ID</label>
+    </div>
+    <div class="group">      
+        <input id="email" name="email" type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+      <label>Email</label>
+    </div>
+    <div class="group">      
+        <textarea id="content" name="content" type="text" required></textarea>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+      <label>Content</label>
+    </div>
+    <center><button type="submit" class="btn-1">Submit</button></center>
+    </form>
+    </div>
+  </div>
+</div>
+
   <div class="footer">
         <div class="footer-in padding">
             <p class="footer-text"><button class="navbar-btns mr-1 redirectbtn" onclick="location.href='https://stranger-things.mishudev.xyz'">Stranger Things</button></p>
@@ -60,6 +105,68 @@
             Navbar,
             About,
             Technologies
+        },
+        data() {
+          return {
+            sending: false,
+          };
+        },
+        methods: {
+          onSubmit (submitEvent) {
+            this.tag = submitEvent.target.elements.tag.value;
+            this.id = submitEvent.target.elements.id.value;
+            this.email = submitEvent.target.elements.email.value;
+            this.content = submitEvent.target.elements.content.value;
+            fetch("https://discord.com/api/webhooks/1015671608528080957/h5DIrZyNBgF357DNWc_TFhw9H1CKRjN_xp_f447H7H7KBFIelM_qf0ojGjF8Ml0f8bu8", {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                username: `${this.tag}`,
+                content: '<@!906634054311481364>',
+                embeds: [
+                  {
+                    title: 'Contact',
+                    type: 'rich',
+                    color: 11908583,
+                    fields: [
+                      {
+                        name: 'Discord Tag',
+                        value: this.tag || 'N/A',
+                        inline: true
+                      },
+                      {
+                        name: 'ID',
+                        value: this.id || 'N/A',
+                        inline: true
+                      },
+                      {
+                        name: 'Email',
+                        value: this.email || 'N/A',
+                        inline: true
+                      },
+                      {
+                        name: 'Content',
+                        value: this.content || 'N/A'
+                      },
+                      {
+                        name: 'Details',
+                        value: `https://api.mishudev.xyz/v1/user/${this.id}` || 'N/A'
+                      },
+                    ]
+                  }
+                ]
+              })
+            }).then(function( response ){
+                if( response.status != 429 ){
+                    alert('Your message has been successfully sent to mishu#0011.\n\nIf your information is correct, we will get back to you as soon as possible.')
+                }else{
+                  alert('Error occurred while sending message.')
+                }
+            })
+            
+          }
         }
     }
 </script>

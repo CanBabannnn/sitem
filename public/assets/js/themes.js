@@ -1,7 +1,9 @@
 const btn = document.querySelector('.switch-mode-btn');
 const elements = $('.modal-overlay, .modal');
 const closeModal = document.querySelector('.close-modal')
+const closeContact = document.querySelector("._close")
 const showProfile = document.querySelector('.discord_profile_viewer')
+const showContact = document.querySelector('.contact_modal_viewer')
 
 btn.addEventListener('click', () => {
     let themeData = localStorage.getItem("theme");
@@ -33,7 +35,7 @@ $(document).ready(function() {
 
 document.addEventListener("keydown", function (pressedKey) {
     if (pressedKey.shiftKey && pressedKey.key === "K") {
-        $('.modal-overlay, .modal').hasClass('active') ? $('.modal-overlay, .modal').removeClass('active') && $('body').css('overflow', 'auto') : $('.modal-overlay, .modal').addClass('active') && $('body').css('overflow', 'hidden');
+        $('.discords, ._discord').hasClass('active') ? $('.discords, ._discord').removeClass('active') && $('body').css('overflow', 'auto') : $('.discords, ._discord').addClass('active') && $('body').css('overflow', 'hidden');
     }
     if(pressedKey.key === 'Escape'){
         if($('.modal-overlay, .modal').hasClass('active')){
@@ -41,14 +43,31 @@ document.addEventListener("keydown", function (pressedKey) {
             $('body').css('overflow', 'auto')
         }
     }
+    if(pressedKey.shiftKey && pressedKey.key === "C"){
+        $('.contact, ._contact').hasClass('active') ? $('.contact, ._contact').removeClass('active') && $('body').css('overflow', 'auto') : $('.contact, ._contact').addClass('active') && $('body').css('overflow', 'hidden');
+    }
 });
 
 closeModal.addEventListener('click', () => {
-    $('.modal-overlay, .modal').removeClass('active');
+    $('.discords, ._discord').removeClass('active');
     $('body').css('overflow', 'auto')
 })
 
 showProfile.addEventListener('click', () => {
-    $('.modal-overlay, .modal').addClass('active');
+    $('.discords, ._discord').addClass('active');
     $('body').css('overflow', 'hidden')
 })
+
+showContact.addEventListener('click', () => {
+    $('.contact, ._contact').addClass('active');
+    $('body').css('overflow', 'hidden')
+})
+
+closeContact.addEventListener('click', () => {
+    $('.contact, ._contact').removeClass('active');
+    $('body').css('overflow', 'auto')
+})
+
+function whoIsMishu() {
+    document.getElementById("whoIsMishu").innerHTML = 'Yasin';
+};
