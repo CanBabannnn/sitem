@@ -65,7 +65,7 @@
       <label>Discord Tag (mishu#0011)</label>
     </div>
     <div class="group">      
-        <input id="id" name="id" type="number" required>
+        <input id="id" name="id" minlength="18" maxlength="18" type="number" required>
         <span class="highlight"></span>
         <span class="bar"></span>
       <label>Discord ID</label>
