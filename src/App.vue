@@ -65,13 +65,13 @@
       <label>Discord Tag (mishu#0011)</label>
     </div>
     <div class="group">      
-        <input id="id" name="id" type="text" required>
+        <input id="id" name="id" type="number" required>
         <span class="highlight"></span>
         <span class="bar"></span>
       <label>Discord ID</label>
     </div>
     <div class="group">      
-        <input id="email" name="email" type="text" required>
+        <input id="email" name="email" type="email" required>
         <span class="highlight"></span>
         <span class="bar"></span>
       <label>Email</label>
