@@ -2,7 +2,7 @@ const inviteBtn = document.querySelector('.invite');
 const inviteName = document.querySelector('.name');
 const inviteImg = document.querySelector('.icon');
 
-fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
+fetch("https://discordapp.com/api/v6/invite/3Yfxnub2e6?with_counts=true", {
         method: 'GET',
         headers: {
                   'Content-Type': 'application/json'
