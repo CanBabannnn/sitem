@@ -2236,5 +2236,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 .banner{
-	url('https://cdn.discordapp.com/banners/906634054311481364/495da3782b55d95802b535964f9b7bf4.png?size=4096') center center no-repeat
+	background: url('https://cdn.discordapp.com/banners/906634054311481364/495da3782b55d95802b535964f9b7bf4.png?size=4096') center center no-repeat;
+	background-size: 'cover';
 }
