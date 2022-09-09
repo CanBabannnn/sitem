@@ -35,7 +35,7 @@
                 <img class="discord_user_img bg-[#EEE8ED]" draggable="false" width="95" src="" alt="mishu avatar" style="border-radius:999%;">
                 </div>
             </div>
-	    <span class="socials">
+	    <span class="socialsSec">
             <a href="https://discord.com/users/906634054311481364"><i class="fa-brands fa-discord text-offline mr-2"></i></a>
             <a href="https://instagram.com/mishudev.xyz"><i class="fa-brands fa-instagram text-offline mr-2"></i></a>
             <a href="https://twitter.com/mishunuz"><i class="fa-brands fa-twitter text-offline mr-2"></i></a>
