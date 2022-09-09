@@ -35,11 +35,7 @@
                 <img class="discord_user_img bg-[#EEE8ED]" draggable="false" width="95" src="" alt="mishu avatar" style="border-radius:999%;">
                 </div>
             </div>
-	    <span class="socials">
-            	<a href="https://discord.com/users/906634054311481364"><i class="fa-brands fa-discord text-offline mr-2"></i></a>
-            	<a href="https://instagram.com/mishudev.xyz"><i class="fa-brands fa-instagram text-offline mr-2"></i></a>
-            	<a href="https://twitter.com/mishunuz"><i class="fa-brands fa-twitter text-offline mr-2"></i></a>
-            </span>
+	    <span class="socials"><a href="https://discord.com/users/906634054311481364"><i class="fa-brands fa-discord text-offline mr-2"></i></a><a href="https://instagram.com/mishudev.xyz"><i class="fa-brands fa-instagram text-offline mr-2"></i></a><a href="https://twitter.com/mishunuz"><i class="fa-brands fa-twitter text-offline mr-2"></i></a></span>
             <h1 class="ml-4 font-bold text-color text-xl mt-3 discord_username" style="padding-top:15px;"><span class="text-color text-gray-500">#</span></h1>
             <div class="customStatus ml-4"><span class="text-color text-sm customText"></span></div>
         </div>
