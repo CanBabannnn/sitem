@@ -1,6 +1,5 @@
 <template>
 <div class="main">
-<notifications group="foo" />
 <div class="preloader">
   <span class="loaderText">better soon</span>
   <!--<div class="loaders">
