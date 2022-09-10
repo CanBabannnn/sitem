@@ -35,7 +35,7 @@
                 </div>
             </div>
 	    <span class="socials">
-              <i class="fa-brands fa-discord text-offline mr-2"></i>
+              
             </span>
             <h1 class="ml-4 font-bold text-color text-xl mt-3 discord_username" style="padding-top:15px;"><span class="text-color text-gray-500">#</span></h1>
             <div class="customStatus ml-4"><span class="text-color text-sm customText"></span></div>
