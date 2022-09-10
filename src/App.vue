@@ -34,11 +34,8 @@
                 <img class="discord_user_img bg-[#EEE8ED]" draggable="false" width="95" src="" alt="mishu avatar" style="border-radius:999%;">
                 </div>
             </div>
-	    <div>
-	    	<span class="socials"></span>
-            	<h1 class="ml-4 font-bold text-color text-xl mt-3 discord_username" style="padding-top:15px;"><span class="text-color text-gray-500">#</span></h1>
-            	<div class="customStatus ml-4"><span class="text-color text-sm customText"></span></div>
-	    </div>
+            <h1 class="ml-4 font-bold text-color text-xl mt-3 discord_username" style="padding-top:15px;"><span class="text-color text-gray-500">#</span></h1>
+            <div class="customStatus ml-4"><span class="text-color text-sm customText"></span></div>
         </div>
     </div>
     <div class="activityDetails" id="activityS">
