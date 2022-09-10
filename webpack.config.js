@@ -45,6 +45,7 @@ module.exports = {
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
+  extensions: "eslint: Recommended",
   devServer: {
     historyApiFallback: true,
     noInfo: true,
