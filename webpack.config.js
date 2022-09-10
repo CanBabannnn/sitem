@@ -11,6 +11,9 @@ module.exports = {
   module: {
     rules: [
       {
+        "no-mixed-spaces-and-tabs": 0,
+      },
+      {
         test: /\.css$/,
         use: [
           'vue-style-loader',
