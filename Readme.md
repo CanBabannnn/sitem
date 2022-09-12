@@ -1,3 +1,6 @@
+# Changelog
+Added social network links to Discord profile modal.
+
 # Preview
 <img src="https://cdn.mishudev.xyz/t/overview.png">
 
