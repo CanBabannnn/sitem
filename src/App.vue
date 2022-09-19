@@ -1,5 +1,6 @@
 <template>
 <div class="main">
+<div class="thisos"><span>You can find the open source codes for this website on <a href="https://github.com/mishuw/mishudev.xyz">GitHub.</a></span></div>
 <div class="preloader">
   <span class="loaderText">better soon</span>
   <div class="loaders">
@@ -45,9 +46,8 @@
             <div class="customStatus ml-4"><span class="text-color text-sm customText"></span></div>
         </div>
     </div>
-    <div class="activityDetails" id="activityS">
-    </div>
-</div>
+    <div class="activityDetails" id="activityS"></div>
+  </div>
   </div>
 </div>
 
@@ -93,12 +93,11 @@
     </div>
   </div>
 </div>
-
-  <div class="footer">
-        <div class="footer-in padding">
-            <p class="footer-text"><button class="navbar-btns mr-1 redirectbtn" onclick="location.href='https://stranger-things.mishudev.xyz'">Stranger Things</button></p>
-        </div>
-    </div>
+<div class="footer">
+  <div class="footer-in padding">
+    <p class="footer-text"><button class="navbar-btns mr-1 redirectbtn" onclick="location.href='https://stranger-things.mishudev.xyz'">Stranger Things</button></p>
+  </div>
+  </div>
 </div>
 </div>
 </template>
