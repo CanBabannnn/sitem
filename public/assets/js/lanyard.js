@@ -124,7 +124,6 @@ function update_presence() {
   document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'?size=4096';
   document.querySelector(".status-bg").style.background = statucolor;
   document.querySelector('.status-bg').innerHTML = `<span class="ml-2 px-2 py-1 statu-bg font-normal rounded-md text-sm"><i class="fa fa-circle statu-circle mr-2"></i>${statuText}</span>`;
-  document.querySelector(".statu-circle").style.background = statucolor;
   document.querySelector(".statu-bg").style.color = statuTextColor;
 
   var cstatus = data.d.activities.find(el => el.id === "custom"); 
