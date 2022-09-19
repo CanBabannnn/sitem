@@ -30,7 +30,7 @@
       <div class="dc-bg pb-1 rounded-b-lg rounded-t-lg">
     <div>
         <div class="mb-3">
-            <div class="banner" style="height:136px;width:340px;border-radius:2%;background:url('https://cdn.discordapp.com/banners/906634054311481364/6a9267ca36eb4ee2fac7967eb02d596f.png?size=4096') center center no-repeat;background-size:contain;background-attachment:fixed;background-position:center;">
+            <div class="banner" style="height:136px;width:340px;border-radius:2%;">
                 <div class="mt-12 relative ml-4" style="padding-top:75px;">
                 <img class="discord_user_img bg-[#EEE8ED]" draggable="false" width="95" src="" alt="mishu avatar" style="border-radius:999%;">
                 </div>
