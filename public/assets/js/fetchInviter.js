@@ -41,16 +41,3 @@ fetch("https://discordapp.com/api/v6/invite/3Ewhx9SHQ6?with_counts=true", {
                 window.open('https://discord.com/invite/212', '_BLANK')
         })
     })
-
-    user = {}
-
-    fetch("https://api.mishudev.xyz/v1/user/906634054311481364", {
-        headers:{
-            'Accept':'application/json',
-            'Content-Type':'application/json',
-        },
-    }).then(response => response.json()).then(data => {
-        user = data
-        document.querySelector('.banner').style.background = `${user.banner !== null ? `url('https://cdn.discordapp.com/banners/${user.id}/${user.banner}?size=4096')` : `${user.hexAccentColor}`}`;
-        document.querySelector('.banner').style.backgroundSize = 'cover';
-    })

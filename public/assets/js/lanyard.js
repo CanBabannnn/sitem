@@ -117,9 +117,8 @@ function update_presence() {
     default:
       statuText = "Offline";
       statuTextColor = "rgb(114, 114, 114)";
-      statucolor = "rgb(114, 114, 114,0.2)";
+      statucolor = "rgb(114, 114, 114,0.5)";
   }
-
   document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
   document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+'?size=4096';
   document.querySelector(".status-bg").style.background = statucolor;

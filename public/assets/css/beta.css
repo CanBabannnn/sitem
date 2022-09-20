@@ -2041,6 +2041,7 @@ a:hover{
 }
 .discord_user_img {
     border-width: 4px;
+    border-radius: 100%;
     border-color: var(--dc-bg);
 }
 .banner{

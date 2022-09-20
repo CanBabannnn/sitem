@@ -26,13 +26,12 @@
 			<span class="text title eskeys">ESC</span>
 		</span>
     </button>
-
-      <div class="dc-bg pb-1 rounded-b-lg rounded-t-lg">
+  <div class="dc-bg pb-1 rounded-b-lg rounded-t-lg">
     <div>
         <div class="mb-3">
             <div class="banner" style="height:136px;width:340px;border-radius:2%;">
                 <div class="mt-12 relative ml-4" style="padding-top:75px;">
-                <img class="discord_user_img bg-[#EEE8ED]" draggable="false" width="95" src="" alt="mishu avatar" style="border-radius:999%;">
+                <img class="discord_user_img bg-[#EEE8ED]" draggable="false" width="95" src="" alt="mishu avatar">
                 </div>
             </div>
             <div class="socialSec">
@@ -47,7 +46,7 @@
         </div>
     </div>
     <div class="activityDetails" id="activityS"></div>
-  </div>
+    </div>
   </div>
 </div>
 
