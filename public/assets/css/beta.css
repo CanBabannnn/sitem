@@ -2044,11 +2044,6 @@ a:hover{
     border-radius: 100%;
     border-color: var(--dc-bg);
 }
-.banner{
-    background-size:cover;
-    background-attachment:fixed;
-    background-position:center;
-}
 .rounded-full-m{
     border-radius:100%;
 }
