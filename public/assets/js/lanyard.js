@@ -27,10 +27,6 @@ setInterval(() => {
 lanyard.onmessage = function (event) {
   received = true;
   data = JSON.parse(event.data);
-  
-  $(document).ready(function () {
-      $('.preloader').fadeOut(500);
-  })
 
   if (data.t === "INIT_STATE" || data.t === "PRESENCE_UPDATE") {
     update_presence();
@@ -151,4 +147,7 @@ function update_presence() {
       document.querySelector('.listening-activity').style.display = "none";
     }
   }, 1000)
+  $(document).ready(function () {
+      $('.preloader').fadeOut(500);
+  })
 }
