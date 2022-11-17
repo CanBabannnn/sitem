@@ -75,7 +75,7 @@ $(document).ready(function() {
         .catch(console.error);
 })
 function logIn(){
-    return location.href = `https://discord.com/api/oauth2/authorize?client_id=934532445024428083&redirect_uri=https%3A%2F%2Fmishudev.xyz&response_type=token&scope=email%20identify&state=${encodeURIComponent(btoa(randomString))}`
+    return location.href = `https://discord.com/api/oauth2/authorize?client_id=934532445024428083&redirect_uri=https%3A%2F%2Fmishudev.xyz&response_type=token&scope=identify%20email&state=${encodeURIComponent(btoa(randomString))}`
 }
 
 function contactSend(){
