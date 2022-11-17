@@ -98,60 +98,8 @@
           };
         },
         methods: {
-          onSubmit (submitEvent) {
-            this.tag = submitEvent.target.elements.tag.value;
-            this.id = submitEvent.target.elements.id.value;
-            this.email = submitEvent.target.elements.email.value;
-            this.content = submitEvent.target.elements.content.value;
-            fetch("https://discord.com/api/webhooks/1042829966708068433/HPGfvjTiUJG238YRa6ebv5TOOKbZFuKGuSc64TCZe2A2TArnKKmwa-65AbfFaZn4XTpO", {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                username: `${this.tag}`,
-                content: '<@!906634054311481364>',
-                embeds: [
-                  {
-                    title: 'Contact',
-                    type: 'rich',
-                    color: 11908583,
-                    fields: [
-                      {
-                        name: 'Discord Tag',
-                        value: this.tag || 'N/A',
-                        inline: true
-                      },
-                      {
-                        name: 'ID',
-                        value: this.id || 'N/A',
-                        inline: true
-                      },
-                      {
-                        name: 'Email',
-                        value: this.email || 'N/A',
-                        inline: true
-                      },
-                      {
-                        name: 'Content',
-                        value: this.content || 'N/A'
-                      },
-                      {
-                        name: 'Details',
-                        value: `https://api.mishudev.xyz/v1/user/${this.id}` || 'N/A'
-                      },
-                    ]
-                  }
-                ]
-              })
-            }).then(function( response ){
-                if( response.status != 429 ){
-                    alert('Your message has been successfully sent to mishu#0011.\n\nIf your information is correct, we will get back to you as soon as possible.')
-                }else{
-                  alert('Error occurred while sending message.')
-                }
-            })
-            
+          onSubmit () {
+            console.log("checking...");
           }
         }
     }
