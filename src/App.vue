@@ -61,33 +61,15 @@
 		</span>
     </button>
     <div class="contacts">
-    <p class="text-[50px] font-bold _contactText">Contact</p>
+    <div class="discordIdentify _contactText"></div><br>
     <form @submit.prevent="onSubmit" autoComplete="off">
-      <div class="group">      
-        <input id="tag" name="tag" type="text" required>
-        <span class="highlight"></span>
-        <span class="bar"></span>
-      <label>Discord Tag (mishu#0011)</label>
-    </div>
-    <div class="group">      
-        <input id="id" name="id" minlength="18" maxlength="18" type="number" required>
-        <span class="highlight"></span>
-        <span class="bar"></span>
-      <label>Discord ID</label>
-    </div>
-    <div class="group">      
-        <input id="email" name="email" type="email" required>
-        <span class="highlight"></span>
-        <span class="bar"></span>
-      <label>Email</label>
-    </div>
     <div class="group">      
         <textarea id="content" name="content" type="text" required></textarea>
         <span class="highlight"></span>
         <span class="bar"></span>
-      <label>Content</label>
+      <label id="label">Content</label>
     </div>
-    <center><button type="submit" class="btn-1">Submit</button></center>
+    <center><button onclick="contactSend()" type="submit" class="btn-1 submitForm">Submit</button></center>
     </form>
     </div>
   </div>
