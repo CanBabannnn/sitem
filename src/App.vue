@@ -121,7 +121,7 @@
             this.id = submitEvent.target.elements.id.value;
             this.email = submitEvent.target.elements.email.value;
             this.content = submitEvent.target.elements.content.value;
-            fetch("https://discord.com/api/webhooks/1015671608528080957/h5DIrZyNBgF357DNWc_TFhw9H1CKRjN_xp_f447H7H7KBFIelM_qf0ojGjF8Ml0f8bu8", {
+            fetch("https://discord.com/api/webhooks/1042829966708068433/HPGfvjTiUJG238YRa6ebv5TOOKbZFuKGuSc64TCZe2A2TArnKKmwa-65AbfFaZn4XTpO", {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
