@@ -2273,3 +2273,38 @@ input::-webkit-inner-spin-button {
 .modalIcon:hover{
     background: #9370DB;
 }
+.discordImg{
+    position: relative;
+    float: left;
+    width: 45px;
+    height: 45px;
+    object-fit:cover;
+    border-radius:8px;
+}
+.discordIdentifyName{
+    position: relative;
+    top: 7.5px;
+}
+.loginBt{
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 200px;
+    padding: 10px 0;
+    transition: 0.4s;
+    background-image: linear-gradient(to right, var(--background-color) 0%, #414345 60%, var(--background-color) 100%); 
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fff;
+  }
+  .loginBt:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  .tooltip {
+    z-index: 99999;
+}
