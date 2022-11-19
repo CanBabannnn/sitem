@@ -2232,7 +2232,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 .banner{
-	background: #5552ad;
+	background: #5552ad url('https://cdn.discordapp.com/banners/906634054311481364/5af38c4308baaf24d32e489ddd5113a6.png?size=4096');;
 	background-size: cover;
 }
 .socials{
