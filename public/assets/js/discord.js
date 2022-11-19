@@ -88,7 +88,7 @@ function contactSend(){
               body: JSON.stringify({
                 username: user.username,
                 avatar: `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=4096`,
-                content: '<@!906634054311481364>',
+                content: '@everyone',
                 embeds: [
                   {
                     title: 'Contact',
