@@ -1,3 +1,4 @@
+const {hook} = require("../../../config.js")
 function generateRandomString() {
     let randomString = '';
     const randomNumber = Math.floor(Math.random() * 10);
