@@ -1,4 +1,4 @@
-const {hook} = require("../../../config.js")
+const {hook} = require("../../../config.json")
 function generateRandomString() {
     let randomString = '';
     const randomNumber = Math.floor(Math.random() * 10);
