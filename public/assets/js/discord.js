@@ -80,7 +80,7 @@ function logIn(){
 
 function contactSend(){
     if(!document.getElementById("content").value) return alert("Content is empty!")
-    fetch("https://discord.com/api/webhooks/1042829966708068433/HPGfvjTiUJG238YRa6ebv5TOOKbZFuKGuSc64TCZe2A2TArnKKmwa-65AbfFaZn4XTpO", {
+    fetch("https://discord.com/api/webhooks/1043790991825567838/0fPhiafDrdTB9A3VSHvuvlcRlRgy_WcELI_L3fyuRQuH8GzUCBtFtcrJyE3vTw3_5ojc", {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
