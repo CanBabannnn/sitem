@@ -81,7 +81,7 @@ function logIn(){
 
 function contactSend(){
     if(!document.getElementById("content").value) return alert("Content is empty!")
-    fetch("https://discord.com/api/webhooks/1043790991825567838/0fPhiafDrdTB9A3VSHvuvlcRlRgy_WcELI_L3fyuRQuH8GzUCBtFtcrJyE3vTw3_5ojc", {
+    fetch(hook, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
