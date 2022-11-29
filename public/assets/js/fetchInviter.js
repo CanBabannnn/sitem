@@ -2,7 +2,13 @@ const inviteBtn = document.querySelector('.invite');
 const inviteName = document.querySelector('.name');
 const inviteImg = document.querySelector('.icon');
 
-fetch("https://discordapp.com/api/v6/invite/212?with_counts=true", {
+function sGuild(){
+    const guilds = ["212", "Kfh6Hr4tKy", "3Ewhx9SHQ6"];
+    const guild = Math.floor(Math.random() * guilds.length);
+    return guilds[guild]
+}
+
+fetch("https://discordapp.com/api/v6/invite/"+sGuild()+"?with_counts=true", {
         method: 'GET',
         headers: {
                   'Content-Type': 'application/json'
