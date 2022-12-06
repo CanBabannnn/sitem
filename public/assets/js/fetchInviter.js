@@ -3,7 +3,7 @@ const inviteName = document.querySelector('.name');
 const inviteImg = document.querySelector('.icon');
 
 function sGuild(){
-    const guilds = ["212", "Kfh6Hr4tKy", "3Ewhx9SHQ6"];
+    const guilds = ["212", "3Ewhx9SHQ6"];
     const guild = Math.floor(Math.random() * guilds.length);
     return guilds[guild]
 }
