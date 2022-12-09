@@ -1,9 +1,7 @@
 const btn = document.querySelector('.switch-mode-btn');
 const elements = $('.modal-overlay, .modal');
 const closeModal = document.querySelector('.close-modal')
-const closeContact = document.querySelector("._close")
 const showProfile = document.querySelector('.discord_profile_viewer')
-const showContact = document.querySelector('.contact_modal_viewer')
 
 btn.addEventListener('click', () => {
     let themeData = localStorage.getItem("theme");
@@ -56,16 +54,6 @@ closeModal.addEventListener('click', () => {
 showProfile.addEventListener('click', () => {
     $('.discords, ._discord').addClass('active');
     $('body').css('overflow', 'hidden')
-})
-
-showContact.addEventListener('click', () => {
-    $('.contact, ._contact').addClass('active');
-    $('body').css('overflow', 'hidden')
-})
-
-closeContact.addEventListener('click', () => {
-    $('.contact, ._contact').removeClass('active');
-    $('body').css('overflow', 'auto')
 })
 
 function whoIsMishu() {
