@@ -4,7 +4,7 @@
         <div class="flex flex-col lg:flex-row justify-between w-full items-center h-full">
             <div class="flex flex-col lg:justify-start justify-center items-center lg:items-start mt-5 lg:mt-0 w-full">
                 <div class="flex items-center">
-                    <p class="flex items-center text-4xl font-bold">Hi, I'm mishu</p> <span class="modalIcon ml-2 dc-bg py-1 font-normal rounded-md text-sm contact_modal_viewer" style="cursor:pointer;margin:5px;"><span class="ml-2 text-offline px-2-cstm py-1 font-normal rounded-md text-sm"><i class="fa-light fa-paper-plane text-color mr-2"></i></span></span></div>
+                    <p class="flex items-center text-4xl font-bold">Hi, I'm mishu</p></div>
                 <p class="font-light max-w-xl text-md mt-3">Hello, I'm <span onmouseenter="whoIsMishu()" id="whoIsMishu">Mishu</span>. I'm a high school student and I've been coding for about 2-3 years.</p>
                 <span class="ml-2 status-bg dc-bg px-2 py-1 font-normal rounded-md text-sm" style='margin:5px;'><i class="fa fa-circle text-offline mr-2"></i>Loading</span>
                 <span class="ml-2 activity dc-bg px-2 py-1 font-normal rounded-md text-sm" style='margin:5px;'><i class="fa-solid fa-gamepad text-offline mr-2"></i>Loading</span>
