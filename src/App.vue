@@ -48,31 +48,6 @@
     </div>
   </div>
 </div>
-
-<div class="modal-overlay contact">
-  <div class="modal _contact">
-    <button class="close-modal _close text-color">
-        <span class="close-wrapper closerP">
-			<span class="close">
-				<i class="fa-solid fa-x"></i>
-			</span>
-			<span class="text title eskeys">ESC</span>
-		</span>
-    </button>
-    <div class="contacts">
-    <div class="discordIdentify _contactText"></div><br>
-    <form @submit.prevent="onSubmit" autoComplete="off">
-    <div class="group">      
-        <textarea id="content" name="content" type="text" required></textarea>
-        <span class="highlight"></span>
-        <span class="bar"></span>
-      <label id="label">Content</label>
-    </div>
-    <center><button onclick="contactSend()" type="submit" class="btn-1 submitForm">Submit</button></center>
-    </form>
-    </div>
-  </div>
-</div>
 <div class="footer">
   <div class="footer-in padding">
     <p class="footer-text"><button class="navbar-btns mr-1 redirectbtn" onclick="location.href='https://stranger-things.mishudev.xyz'">Stranger Things</button></p>
@@ -96,10 +71,6 @@
             sending: false,
           };
         },
-        methods: {
-          onSubmit () {
-            console.log("checking...");
-          }
-        }
+       }
     }
 </script>
