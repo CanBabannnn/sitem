@@ -70,7 +70,6 @@
           return {
             sending: false,
           };
-        },
        }
     }
 </script>
