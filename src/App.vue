@@ -1,5 +1,6 @@
 <template>
 <div class="main">
+<div class="thisos"><span>You can find the open source codes for this website on <a href="https://github.com/mishuw/mishudev.xyz" target="_blank">GitHub.</a></span></div>
 <div class="preloader">
   <span class="loaderText">better soon</span>
   <div class="loaders">
