@@ -116,7 +116,7 @@ function update_presence() {
       statucolor = "rgb(114, 114, 114,0.5)";
   }
   document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
-  document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/` + data.d.discord_user.id + '/' + data.d.discord_user.avatar+data.d.discord_user.avatar.startsWith("a_") ? ".gif" : ".png"+'?size=4096';
+  document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/${data.d.discord_user.id}/${data.d.discord_user.avatar}${data.d.discord_user.avatar.startsWith("a_") ? ".gif" : ".png"}?size=4096';
   document.querySelector(".status-bg").style.background = statucolor;
   document.querySelector('.status-bg').innerHTML = `<span class="ml-2 px-2 py-1 statu-bg font-normal rounded-md text-sm"><i class="fa fa-circle statu-circle mr-2"></i>${statuText}</span>`;
   document.querySelector(".statu-bg").style.color = statuTextColor;
