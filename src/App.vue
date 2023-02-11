@@ -1,6 +1,6 @@
 <template>
 <div class="main">
-<div class="thisos"><span>You can find the open source codes for this website on <a href="https://github.com/mishuw/mishudev.xyz" target="_blank">GitHub.</a></span></div>
+<div class="thisos"><span>You can find the open source codes for this website on <a href="https://github.com/mishuw/mishuw.github.io" target="_blank">GitHub.</a></span></div>
 <div class="preloader">
   <span class="loaderText">better soon</span>
   <div class="loaders">
@@ -37,7 +37,7 @@
             <div class="socialSec">
               <div class="socials">
                 <a href="https://discord.com/users/906634054311481364"><i class="fa-brands fa-discord text-offline mr-2"></i></a>
-                <a href="https://instagram.com/mishudev.xyz"><i class="fa-brands fa-instagram text-offline mr-2"></i></a>
+                <a href="https://instagram.com/atavratcode"><i class="fa-brands fa-instagram text-offline mr-2"></i></a>
                 <a href="https://twitter.com/mishunuz"><i class="fa-brands fa-twitter text-offline mr-2"></i></a>
               </div>
             </div>
