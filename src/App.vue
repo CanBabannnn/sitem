@@ -51,7 +51,7 @@
 </div>
 <div class="footer">
   <div class="footer-in padding">
-    <p class="footer-text"><button class="navbar-btns mr-1 redirectbtn" onclick="location.href='https://stranger-things.mishudev.xyz'">Stranger Things</button></p>
+    <p class="footer-text"><button class="navbar-btns mr-1 redirectbtn" onclick="location.href='https://mstranger-things.netlify.app/'">Stranger Things</button></p>
   </div>
   </div>
 </div>
