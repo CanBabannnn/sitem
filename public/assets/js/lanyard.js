@@ -81,10 +81,10 @@ function update_presence() {
     </div>
     `;
   }else {
-    document.querySelector('.activity').innerHTML = ``;
-    document.querySelector('#activityS').innerHTML = ``;
-    document.querySelector('.activity').style.display = 'none'
-    document.querySelector('#activityS').style.display = 'none'
+    document.querySelector('.activity')?.innerHTML = ``;
+    document.querySelector('#activityS')?.innerHTML = ``;
+    document.querySelector('.activity')?.style.display = 'none'
+    document.querySelector('#activityS')?.style.display = 'none'
   };
   var statucolor;
   var statuTextColor;
@@ -115,18 +115,18 @@ function update_presence() {
       statuTextColor = "rgb(114, 114, 114)";
       statucolor = "rgb(114, 114, 114,0.5)";
   }
-  document.querySelector('.discord_username').innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
-  document.querySelector('.discord_user_img').src = `https://cdn.discordapp.com/avatars/${data.d.discord_user.id}/${data.d.discord_user.avatar}${data.d.discord_user.avatar.startsWith("a_") ? ".gif" : ".png"}?size=4096`;
-  document.querySelector(".status-bg").style.background = statucolor;
-  document.querySelector('.status-bg').innerHTML = `<span class="ml-2 px-2 py-1 statu-bg font-normal rounded-md text-sm"><i class="fa fa-circle statu-circle mr-2"></i>${statuText}</span>`;
-  document.querySelector(".statu-bg").style.color = statuTextColor;
+  document.querySelector('.discord_username')?.innerHTML = `${data.d.discord_user.username}<span class="text-color text-gray-500">#${data.d.discord_user.discriminator}</span>`;
+  document.querySelector('.discord_user_img')?.src = `https://cdn.discordapp.com/avatars/${data.d.discord_user.id}/${data.d.discord_user.avatar}${data.d.discord_user.avatar.startsWith("a_") ? ".gif" : ".png"}?size=4096`;
+  document.querySelector(".status-bg")?.style.background = statucolor;
+  document.querySelector('.status-bg')?.innerHTML = `<span class="ml-2 px-2 py-1 statu-bg font-normal rounded-md text-sm"><i class="fa fa-circle statu-circle mr-2"></i>${statuText}</span>`;
+  document.querySelector(".statu-bg")?.style.color = statuTextColor;
 
   var cstatus = data.d.activities.find(el => el.id === "custom"); 
   if(cstatus) {
-    document.querySelector('.customStatus').innerHTML = `<span class="text-color text-sm customText">${cstatus.state}</span><hr style="margin-right:1rem;">`;
+    document.querySelector('.customStatus')?.innerHTML = `<span class="text-color text-sm customText">${cstatus.state}</span><hr style="margin-right:1rem;">`;
   }else {
-    document.querySelector('.customStatus').innerHTML = ``;
-    document.querySelector('.customStatus').style.display = "none";
+    document.querySelector('.customStatus')?.innerHTML = ``;
+    document.querySelector('.customStatus')?.style.display = "none";
   }
 
   setInterval(function(){
@@ -141,10 +141,10 @@ function update_presence() {
     var song = data.d.spotify.song.split("(")[0];
     if(window.getComputedStyle(document.querySelector('.listening-activity')).display == "none"){ document.querySelector('.listening-activity').style.display = 'flex'; }
 
-    document.querySelector('.listening-activity').innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands text-color fa-spotify"></i> Listening to <a href="https://ope.spotify.com/track/${data.d.spotify.track_id}" target="_blank">${song}</a> by ${artist} <span class="text-color">— left ${spotify_time}</span></span></span>`
+    document.querySelector('.listening-activity')?.innerHTML = `<span class="ml-2 text-color px-2 py-1 font-normal rounded-md text-sm"><i class="fa-brands text-color fa-spotify"></i> Listening to <a href="https://ope.spotify.com/track/${data.d.spotify.track_id}" target="_blank">${song}</a> by ${artist} <span class="text-color">— left ${spotify_time}</span></span></span>`
     } else {
-      document.querySelector('.listening-activity').innerHTML = ``;
-      document.querySelector('.listening-activity').style.display = "none";
+      document.querySelector('.listening-activity')?.innerHTML = ``;
+      document.querySelector('.listening-activity')?.style.display = "none";
     }
   }, 1000)
   $(document).ready(function () {
