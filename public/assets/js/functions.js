@@ -23,11 +23,11 @@ $(document).ready(function() {
     if(themeData === 'dark') {
         document.documentElement.classList.toggle('dark');
         console.log('Loaded theme (dark)');
-        document.getElementById('switch-mode-btn').innerHTML = '<i class="fa-solid fa-sun-bright"></i>';
+        document.getElementById('switch-mode-btn')?.innerHTML = '<i class="fa-solid fa-sun-bright"></i>';
     } else if(themeData === null || themeData === 'light') {
         document.documentElement.classList.remove('dark');
         console.log('Loaded theme (light)');
-        document.getElementById('switch-mode-btn').innerHTML = '<i class="fa-solid fa-moon"></i>';
+        document.getElementById('switch-mode-btn')?.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
 })
 
