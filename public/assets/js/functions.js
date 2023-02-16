@@ -57,5 +57,5 @@ showProfile.addEventListener('click', () => {
 })
 
 function whoIsMishu() {
-    document.getElementById("whoIsMishu").innerHTML = 'Yasin';
+    document.getElementById("whoIsMishu").innerHTML = 'Can';
 };
