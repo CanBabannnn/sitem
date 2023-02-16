@@ -2,13 +2,7 @@ const inviteBtn = document.querySelector('.invite');
 const inviteName = document.querySelector('.name');
 const inviteImg = document.querySelector('.icon');
 
-function sGuild(){
-    const guilds = ["212", "ZY8PrcpeTu"];
-    const guild = Math.floor(Math.random() * guilds.length);
-    return guilds[guild]
-}
-
-fetch("https://discordapp.com/api/v6/invite/"+sGuild()+"?with_counts=true", {
+fetch("https://discordapp.com/api/v6/invite/Kfh6Hr4tKy?with_counts=true", {
         method: 'GET',
         headers: {
                   'Content-Type': 'application/json'
@@ -40,8 +34,8 @@ fetch("https://discordapp.com/api/v6/invite/"+sGuild()+"?with_counts=true", {
             })
         })
     }).catch(error => {
-        console.log('Discord API Rate Limited')
-        document.querySelector('.name').innerText = 'Rate Limit'
+        console.log('Discord API Error')
+        document.querySelector('.name').innerText = 'API ERROR'
             inviteBtn.addEventListener('click', () =>{
                 document.querySelector('.invite').innerText = 'Joined'
                 window.open('https://discord.com/invite/212', '_BLANK')
