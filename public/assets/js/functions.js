@@ -1,9 +1,9 @@
-const btn = $('.switch-mode-btn');
-const elements = $('.modal-overlay, .modal');
-const closeModal = $('.close-modal')
-const showProfile = $('.discord_profile_viewer')
+const btn = document.querySelector('.switch-mode-btn');
+const elements = document.querySelector('.modal-overlay, .modal');
+const closeModal = document.querySelector('.close-modal')
+const showProfile = document.querySelector('.discord_profile_viewer')
 
-btn.addEventListener('click', () => {
+btn?.addEventListener('click', () => {
     let themeData = localStorage.getItem("theme");
     if(themeData === 'dark') {
         localStorage.setItem('theme', 'light');
